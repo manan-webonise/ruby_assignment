@@ -5,14 +5,17 @@
 
 '''
 def sum_of_cubes(a, b)
-	sum = 0
+	x = ((a-1) * ((a-1) + 1) / 2)
+  y = (b * (b + 1) / 2)
+  puts (y*y)-(x*x)
+  sum = 0
   for i in a..b
     c = i ** 3
     sum += c
   end
   puts sum
 end
-sum_of_cubes(1, 3)
+sum_of_cubes(1, 97)
 '''
 
 
@@ -118,7 +121,7 @@ def strRecurse(i,string1)
 	end
 end
 i=0
-str_recurse(i,string1)
+strRecurse(i,string1)
 '''
 
 
@@ -291,20 +294,23 @@ puts date_arr_format()
 # Q.21) Print prime numbers from the given array.
 
 '''
-require "prime"
-def str_travers(arr)
-	count=0
-	i = 2
-	for num in arr
-		 if Prime.prime?(num)
-		   	puts "#{num} is a prime number"
-		 else
-		  	puts "#{num} is a not prime number"
-		 end
-
-	end
+def is_prime(arr)
+	arr.each{|num|
+  flag = false
+  if num>1
+    for i in 2..num-1
+      if num%i==0
+        flag = true
+        break
+      end
+    end
+    if flag==false
+      puts "#{num} is a prime number"
+    end
+  end
+  }
 end
-str_travers([2, 3, 5, 1])
+is_prime([2, 3, 5, 6, 7, 1])
 '''
 
 

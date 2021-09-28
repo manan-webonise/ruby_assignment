@@ -377,7 +377,7 @@ vowels("Welcome to webonise!")
 
 
 
-# Q.26) Program to Sort a Hash by Value.
+# Q.26) Write a Program to Sort a Hash by Value.
 
 '''
 def hash_sort()
